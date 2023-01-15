@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+        <link rel="stylesheet" href="lib/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" href="css/index.css">
+        
+        <script src="lib/jquery.min.js"></script>
+        <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+        <script src="js/index.js"></script>
+        <script charset="utf-8" src="cordova.js"></script>
+        
+        <title>Contacts</title>
+    </head>
+    <body>
+        <div data-role="page"  id="contactpage" >
+            
+            <div data-role="header">
+                
+                <h1>Mes contacts</h1>
+            </div>
+
+            <div role="main" class="ui-content">
+                <a href="#contactadd" data-role="button"data-icon="plus" data-iconpos="right">Ajouter</a>
+                
+                 <ul id="taskList" data-role="listview"   data-filter="true" data-filter-placeholder="rechercher un contact" data-inset="true">
+                    <li>
+                        <a href="#contactdetail"><img src="img/woman.webp" >
+                            <h2>Mere</h2>
+                            <p>77 431 65 03</p>
+                        </a>
+                    </li> <!-- 
+                    <li>
+                        <a href="#"><img src="img/woman.webp" >
+                            <h2>Adja</h2>
+                            <p>77 229 64 19</p>
+                        </a>
+                    </li> 
+                    <li>
+                        <a href="#"><img src="img/man.webp" >
+                            <h2>Pere</h2>
+                            <p>77 631 62 88</p>
+                        </a>
+                    </li> 
+                    <li>
+                        <a href="#"><img src="img/woman.webp" >
+                        <h2>Mami</h2>
+                        <p>78 149 78 37</p></a>
+                    </li> -->
+                </ul>
+        
+            </div>
+            
+
+            <div data-role="footer" data-position="fixed">
+                <h1>DIC3 &copy; 2022</h1>
+            </div>
+
+        </div>
+
+
+        <div data-role="page"  id="contactadd">
+
+            <div data-role="header">
+                
+                <h1>Mes contacts</h1>
+            </div>
+
+            <div role="main" class="ui-content">
+
+                <div data-role="header">
+                
+                    <h1 data-icon="del">Ajout d'un contact</h1>
+                </div>
+
+                <ul id="contadd" data-role="listview" data-inset="true">  
+                    <form>
+                        <label>Nom Complet</label>
+                        <input type="text" id="nom"/>
+
+                        <label>Numéro de téléphone</label>
+                        <input type="number" id="numero"/>
+
+                        <label>Email</label>
+                        <input type="email" id="email" />  
+
+                        <label>Adresse</label>
+                        <input type="text" id="adr"/>  
+                        
+                        <<input type="button" value="Ajouter" />>
+                       
+                    </form>
+                </ul>
+                <a href="#contactpage" data-role="button" data-icon="back" data-iconpos="right">Retourner</a>
+                
+                
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h1>DIC3 &copy; 2022</h1>
+            </div>
+        </div>
+
+        <div data-role="page"  id="contactdetail">
+            
+            <div data-role="header">
+                
+                <h1>Mes contacts</h1>
+            </div>
+
+            <div role="main" class="ui-content">
+                <div data-role="header">
+                
+                    <h1 data-icon="del">Détails du contact</h1>
+                </div>
+                <ul id="contdetail" data-role="listview" data-inset="true">  
+                    <li>
+                        <img src="img/woman.webp" >
+                            <h2>Nom du contact</h2>
+                            <p>Mere</p>  
+                    </li>
+                    <li>
+                        <h2>Téléphone</h2>
+                        <p>774316503</p>
+                    </li>
+                    <li>
+                        <h2>Email</h2>
+                        <p>Non renseigné</p>
+                    </li>
+                    <li>
+                        <h2>Adresse</h2>
+                        <p>Non renseigné</p>
+                    </li> 
+                    
+                </ul>
+            </div>
+            
+
+            <div data-role="footer" data-position="fixed">
+                <h1>DIC3 &copy; 2022</h1>
+            </div>
+
+        </div>
+    </body>
+</html>
